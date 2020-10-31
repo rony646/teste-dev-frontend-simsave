@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "simsave-project"
+    }
+  },
+  "defaultProject": "simsave-project",
+  "cli": {
+    "analytics": "b2e05f75-b0b9-4582-995e-06b62621d409"
+  }
 }
