@@ -1,0 +1,48 @@
+header {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 23px;
+    justify-content: space-between;
+    height: 65px;
+    width: 100%;
+    background-color: #ffff;
+}
+
+.primary-button {
+    background: #1767E5;
+}
+
+.primary-button:active {
+    background: #1766e5a6;
+    border: none;
+}
+
+.stroked-button {
+    border: 1px solid #E0E0E0;
+    color: #2196F3;
+}
+
+.buttons-containter > .button {
+    font-family: 'Roboto';
+    font-weight: 400;
+    width: 124px;
+    height: 36px;
+    margin: 0 5px;
+    text-align: center;
+    line-height: 36px;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 0 10px;
+    }
+
+    .buttons-containter > .button {
+        width: 75px;
+        font-size: 10px;
+        padding: 0px;
+    }
+}

@@ -1,7 +1,24 @@
 
-<div>
-  <app-header></app-header>
-  
+<style>
+  .container {
+    display: grid;
+    position: relative;
+    max-width: 1920px;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: greenyellow;
+  }
+
+  #a1 {
+    height: 800px;
+    background-color: blue;
+  }
+</style>
+
+<div class="container">
+    <app-header></app-header>
+    <div id="a1">a</div>
+    <div>Footer area</div>
 </div>
 
 <router-outlet></router-outlet>
