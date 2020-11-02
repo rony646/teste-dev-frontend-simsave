@@ -1,6 +1,7 @@
 header {
     display: flex;
     position: fixed;
+    z-index: 2;
     align-items: center;
     box-sizing: border-box;
     padding: 0 23px;
@@ -8,6 +9,7 @@ header {
     height: 65px;
     width: 100%;
     background-color: #ffff;
+    box-shadow: 1px 1px 9px #0000005e;
 }
 
 .primary-button {

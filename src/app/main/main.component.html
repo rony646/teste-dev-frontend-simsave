@@ -1,1 +1,81 @@
-<p>main works!</p>
+<style>
+    .main {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        background: grey;
+    }
+
+    .banner-area {
+        position: relative;
+        height: 800px;
+        background: url('../../assets/banner.png');
+    }
+
+    .cards-container {
+        background: #F6F6F9; 
+        display: flex;
+        height: 356px; 
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+        color: #5D5D5D;
+        background: #ffff;
+        border: 1px solid #EBEBEB;
+        border-radius: 10px;
+        height: 300px;
+        width: 300px;
+    }
+
+    .card-title {
+        font-weight: bolder;
+    }
+
+    @media (max-width: 768px) {
+        .banner-area {
+            height: 700px;
+            background-position: -1100px !important;
+            background: url('../../assets/banner.png');
+        }
+
+        .cards-container {
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 1400px;
+        }
+    }
+</style>
+
+<div class="main">
+    <div class="banner-area"></div>
+    <div class="cards-container">
+        <div *ngFor="let product of data.products; index as i ">
+            <mat-card class="card">
+                <mat-card-header [ngStyle]="{ 'color': product.color}">
+                    <mat-card-title ><h1 class="card-title">{{product.title}}</h1></mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <p style="font-size: 12px; text-align: center;">
+                        {{product.text}}
+                    </p>
+                </mat-card-content>
+                <div *ngIf="i === 0 || i === 3">
+                    <button mat-stroked-button color="primary" [ngStyle]="{ 'color': product.color, 'border': '1px solid #E0E0E0', 'width': '133px', 'height': '36px'}">Saiba mais</button>
+                </div>
+                <div *ngIf="i === 1 || i === 2">
+                    <button mat-stroked-button disabled [ngStyle]="{ 'color': '#878787', 'border': '1px solid #E0E0E0', 'width': '133px', 'height': '36px'}">Em Breve</button>
+                </div>
+               
+            </mat-card>
+            
+        </div>
+    </div>
+    
+</div>
