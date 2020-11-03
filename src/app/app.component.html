@@ -3,10 +3,13 @@
   .container {
     display: grid;
     position: relative;
+    grid-template-areas: "header"
+                          "main"
+                          "footer";
+    grid-template-rows: 65px 1fr 1fr;
     max-width: 1920px;
-    height: 100vh;
     margin: 0 auto;
-    background-color: greenyellow;
+    max-height: 100vh;
   }
 
   .main {
@@ -14,12 +17,14 @@
     height: 800px;
     background: brown;
   }
+
+  
 </style>
 
 <div class="container">
     <app-header></app-header>
     <app-main></app-main>
-    <div>footer "to do"</div>
+    <app-footer></app-footer>
 </div>
 
 <router-outlet></router-outlet>
