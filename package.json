@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "start-all": "ng serve --host 192.168.1.2",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
